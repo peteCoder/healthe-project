@@ -1,4 +1,6 @@
 import React from 'react'
+import { DefaultNavbar } from "../../components/DefaultNavbar";
+import DoctorsSidebar from './DoctorsSidebar';
 
 function DashboardData() {
             const users = [
@@ -9,6 +11,16 @@ function DashboardData() {
           },
         ]
   return (
+    <section className="flex gap-6 overflow-x-hidden">
+      <div>
+        <DoctorsSidebar />
+      </div>
+      <div className="text-xl text-black w-full bg-backgroundGray font-semibold">
+        <div>
+          {/* Navbar */}
+          <DefaultNavbar />
+
+          <section>
         <section className="px-4">
             {/* main content */}
             <div className="flex flex-col w-full  shadow-lg my-4 p-6 rounded-xl wave-background">
@@ -160,6 +172,10 @@ function DashboardData() {
 
               <div className="divider lg:divider-horizontal"></div>
             </div>
+    </section>
+    </section>
+        </div>
+      </div>
     </section>
   )
 }

@@ -2,6 +2,16 @@ import React from 'react'
 
 function TakeVitals() {
   return (
+    <section className="flex gap-6 overflow-x-hidden">
+      <div>
+        <NurseSidebar />
+      </div>
+      <div className="text-xl text-black w-full bg-backgroundGray font-semibold">
+        <div>
+          {/* Navbar */}
+          <DefaultNavbar />
+
+          <section className="px-4">
     <div className="p-4 m-4 bg-white shadow-lg rounded-lg">
         <h1 className='py-10'>Take vital Signs</h1>
       <div>
@@ -132,6 +142,10 @@ function TakeVitals() {
         </div>
       </div>
     </div>
+    </section>
+        </div>
+      </div>
+    </section>
   );
 }
 

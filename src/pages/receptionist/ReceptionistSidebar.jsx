@@ -30,7 +30,7 @@ const menus = [
     margin: true,
   },
 ];
-                const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(true);
   return (
     <div
       className={`bg-white min-h-screen ${

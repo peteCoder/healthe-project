@@ -1,9 +1,9 @@
 import React from 'react'
 import { DefaultNavbar } from "../../components/DefaultNavbar";
 import DoctorsSidebar from './DoctorsSidebar';
-// import DashboardData from './DashboardData';
-// import Appointments from "./Appointments"
-// import Consultation from "./Consultation"        
+import DashboardData from './DashboardData';
+import Appointments from "./Appointments"
+import Consultation from "./Consultation"        
 import PatientsHistory from "./PatientsHistory"        
 
 function DoctorsMain() {
@@ -19,13 +19,14 @@ function DoctorsMain() {
 
           <section>
             {/* <DashboardData /> */}
-            {/* <Appointments /> */}
+            <Appointments />
             {/* <Consultation /> */}
             <PatientsHistory />
           </section>
         </div>
       </div>
     </section>
+    
   );
 }
 

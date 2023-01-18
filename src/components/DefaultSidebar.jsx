@@ -5,7 +5,7 @@ import { RiSettings4Line } from  "react-icons/ri";
 import { TbReportAnalytics } from  "react-icons/tb";
 import { AiOutlineUser, AiOutlineHeart } from  "react-icons/ai";
 import { FiMessageSquare, FiFolder, FiShoppingCart } from  "react-icons/fi";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function DefaultSidebar() {
         const menus = [

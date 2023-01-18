@@ -3,6 +3,7 @@ import { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { MdOutlineDashboard, MdOutlineEventNote } from "react-icons/md";
 import { RxCalendar } from "react-icons/rx";
+import { DefaultNavbar } from "../../components/DefaultNavbar";
 // import { AiOutlineUser } from "react-icons/ai";
 // import {FiFolder, FiShoppingCart } from "react-icons/fi";
 import {BsFileEarmarkText } from "react-icons/bs";
@@ -32,6 +33,7 @@ function DoctorsSidebar() {
             ];
         const [open, setOpen] = useState(true);
   return (
+    
     <div
       className={`bg-white min-h-screen ${
         open ? "w-72" : "w-16"
@@ -72,6 +74,7 @@ function DoctorsSidebar() {
         ))}
       </div>
     </div>
+    
   )
 }
 

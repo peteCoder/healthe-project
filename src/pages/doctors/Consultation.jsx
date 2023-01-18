@@ -1,10 +1,22 @@
 import React from 'react'
+import { DefaultNavbar } from "../../components/DefaultNavbar";
 import DefaultSearch from '../../components/DefaultSearch'
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import DoctorsSidebar from './DoctorsSidebar';
 
 function Consultation() {
   return (
+    <section className="flex gap-6 overflow-x-hidden">
+      <div>
+        <DoctorsSidebar />
+      </div>
+      <div className="text-xl text-black w-full bg-backgroundGray font-semibold">
+        <div>
+          {/* Navbar */}
+          <DefaultNavbar />
+
+          <section>
     <div className="p-4 m-4 bg-white rounded-lg shadow-lg">
       <h1>Consultation Notes</h1>
       <div className="flex flex-col w-full">
@@ -232,6 +244,10 @@ function Consultation() {
         </div>
       </div>
     </div>
+    </section>
+    </div>
+  </div>
+</section>
   );
 }
 

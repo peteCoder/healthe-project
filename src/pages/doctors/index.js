@@ -1,0 +1,5 @@
+export {default as Appointments} from './Appointments'
+export {default as Consultation} from './Consultation'
+export {default as DashboardData} from './DashboardData'
+export {default as DoctorsSidebar} from './DoctorsSidebar'
+export {default as PatientsHistory} from './PatientsHistory'

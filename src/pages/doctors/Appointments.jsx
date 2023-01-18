@@ -1,7 +1,18 @@
 import React from 'react'
-
+import { DefaultNavbar } from "../../components/DefaultNavbar";
+import DoctorsSidebar from './DoctorsSidebar';
 function Appointments() {
   return (
+    <section className="flex gap-6 overflow-x-hidden">
+      <div>
+        <DoctorsSidebar />
+      </div>
+      <div className="text-xl text-black w-full bg-backgroundGray font-semibold">
+        <div>
+          {/* Navbar */}
+          <DefaultNavbar />
+
+          <section>
     <section className="p-4 m-4 bg-white shadow-lg rounded-lg">
       <h1 className="py-4 font-300">Today's Appointments</h1>
       <div className="overflow-x-auto">
@@ -153,6 +164,11 @@ function Appointments() {
           </tbody>
         </table>
       </div>
+      </div>
+    </section>
+
+    </section>
+        </div>
       </div>
     </section>
   );
