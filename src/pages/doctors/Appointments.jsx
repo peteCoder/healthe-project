@@ -1,6 +1,7 @@
 import React from 'react'
 import { DefaultNavbar } from "../../components/DefaultNavbar";
 import DoctorsSidebar from './DoctorsSidebar';
+
 function Appointments() {
   return (
     <section className="flex gap-6 overflow-x-hidden">
