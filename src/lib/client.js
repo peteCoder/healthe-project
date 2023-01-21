@@ -10,6 +10,8 @@ const client = sanityClient({
     useCdn: true, // `false` if you want to ensure fresh data
 });
 
+
+
 const builder = imageUrlBuilder(client);
 
 export const urlFor = (source) => builder.image(source);
