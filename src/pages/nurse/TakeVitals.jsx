@@ -2,16 +2,7 @@ import React from 'react'
 
 function TakeVitals() {
   return (
-    <section className="flex gap-6 overflow-x-hidden">
-      <div>
-        <NurseSidebar />
-      </div>
-      <div className="text-xl text-black w-full bg-backgroundGray font-semibold">
-        <div>
-          {/* Navbar */}
-          <DefaultNavbar />
-
-          <section className="px-4">
+    
     <div className="p-4 m-4 bg-white shadow-lg rounded-lg">
         <h1 className='py-10'>Take vital Signs</h1>
       <div>
@@ -72,7 +63,7 @@ function TakeVitals() {
                 <td>
                   <div className="form-control w-full max-w-xs">
                     <select className="select select-bordered">
-                      <option disabled selected>
+                      <option disabled>
                         select vitals
                       </option>
                       <option>Blood Pressure</option>
@@ -137,15 +128,12 @@ function TakeVitals() {
             </tbody>
           </table>
           <div className="flex w-full justify-end items-end my-4">
-            <button class="btn btn-active btn-primary">Save</button>
+            <button className="btn btn-active btn-primary">Save</button>
           </div>
         </div>
       </div>
     </div>
-    </section>
-        </div>
-      </div>
-    </section>
+    
   );
 }
 

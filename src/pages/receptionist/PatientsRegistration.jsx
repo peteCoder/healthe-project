@@ -59,7 +59,7 @@ function PatientsRegistration() {
               <span className="label-text">Patient type</span>
             </label>
             <select className="select select-bordered">
-              <option disabled selected>
+              <option disabled>
                 Pick one
               </option>
               <option>HMO</option>
@@ -81,7 +81,7 @@ function PatientsRegistration() {
               <span className="label-text">Gender</span>
             </label>
             <select className="select select-bordered">
-              <option disabled selected>
+              <option disabled>
                 select gender
               </option>
               <option>Male</option>

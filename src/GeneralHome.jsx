@@ -1,30 +1,20 @@
 import React from 'react'
 import { DefaultNavbar } from './components/DefaultNavbar';
 import DefaultSidebar from './components/DefaultSidebar';
-// import {renderLineChart } from './data/Chart';
-// import { Link } from "react-router-dom";
 
 const GeneralHome = () => {
     const users = [
         {greeting:"Good Afternoon", firstname: "Joseph", lastname: "Philips"}
     ];
   return (
-    <section className="flex gap-6 overflow-x-hidden">
-      <div>
-        <DefaultSidebar />
-      </div>
-      <div className="text-xl text-black w-full bg-backgroundGray font-semibold">
-        <div>
-          {/* Navbar */}
-          <DefaultNavbar />
-
-          <section className="px-4">
+    <>
+    
             {/* main content */}
             <div className="flex flex-col w-full  shadow-lg my-4 p-6 rounded-xl wave-background">
               <div className="flex flex-row justify-between items-center">
                 <div className="flex flex-col">
                   {users?.map((user, i) => (
-                    <div className="flex flex-col">
+                    <div key={i} className="flex flex-col">
                       <p className="text-sm tracking-wide flex">
                         {user?.greeting}
                         <span className="ml-1 text-yellow-500">
@@ -169,10 +159,7 @@ const GeneralHome = () => {
 
               <div className="divider lg:divider-horizontal"></div>
             </div>
-          </section>
-        </div>
-      </div>
-    </section>
+          </>
   );
 }
 

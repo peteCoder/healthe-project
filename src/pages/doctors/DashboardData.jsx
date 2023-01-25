@@ -11,23 +11,13 @@ function DashboardData() {
           },
         ]
   return (
-    <section className="flex gap-6 overflow-x-hidden">
-      <div>
-        <DoctorsSidebar />
-      </div>
-      <div className="text-xl text-black w-full bg-backgroundGray font-semibold">
-        <div>
-          {/* Navbar */}
-          <DefaultNavbar />
-
-          <section>
-        <section className="px-4">
+    <>
             {/* main content */}
             <div className="flex flex-col w-full  shadow-lg my-4 p-6 rounded-xl wave-background">
               <div className="flex flex-row justify-between items-center">
                 <div className="flex flex-col">
                   {users?.map((user, i) => (
-                    <div className="flex flex-col">
+                    <div key={user.firstname} className="flex flex-col">
                       <p className="text-sm tracking-wide flex">
                         {user?.greeting}
                         <span className="ml-1 text-yellow-500">
@@ -172,11 +162,7 @@ function DashboardData() {
 
               <div className="divider lg:divider-horizontal"></div>
             </div>
-    </section>
-    </section>
-        </div>
-      </div>
-    </section>
+            </>
   )
 }
 

@@ -5,6 +5,10 @@ import ReceptionistMain from './pages/receptionist/ReceptionistMain'
 import PharmacyMain from './pages/pharmacy/PharmacyMain'
 import {Routes, Route} from 'react-router-dom'
 
+import { ProtectedRoute, UnProtectedRoute } from './context/Routes'
+
+import {UserContextProvider } from './context/UserContext';
+
 // Doctor
 import { 
   Appointments,
@@ -13,8 +17,7 @@ import {
   PatientsHistory
 } from './pages/doctors';
 
-// Pharmacy
-// import {PharmacyMain} from './pages/pharmacy';
+
 
 // Nurse
 import {
@@ -22,15 +25,73 @@ import {
   VitalsHistory
 } from './pages/nurse'
 
+import ParentNavigation from './navigation/parentNavigation'
+import Login from './pages/Login'
+import SignIn from './pages/SignIn'
+import { useState } from 'react'
+
 function App() {
+  const[user, setUser] = useState(false);
+
+
   return (
-    <div className="App">
+    <UserContextProvider>
+
       <Routes>
-        <Route path='/doctor' element={<DashboardData />} />
-        <Route path='/doctor/appointments' element={<Appointments />} />
-        <Route path='/doctor/patient-history' element={<Consultation />} />
+          <Route path='/' element={
+            <ProtectedRoute>
+              <ParentNavigation>
+                <GeneralHome />
+              </ParentNavigation>
+            </ProtectedRoute>
+          } />
+
+          <Route path='/login' element={
+            <UnProtectedRoute>
+              <Login />
+            </UnProtectedRoute>
+          } />
+
+          <Route path='/signin' element={
+            <UnProtectedRoute>
+              <SignIn />
+            </UnProtectedRoute>
+          } />
+
+          <Route path='/dashboard' element={
+            <ProtectedRoute>
+              <ParentNavigation>
+                <DashboardData />
+              </ParentNavigation>
+              
+            </ProtectedRoute>
+          } />
+
+          <Route path='/doctor' element={
+            <ProtectedRoute>
+              <ParentNavigation>
+                <DoctorsMain />
+              </ParentNavigation>
+            </ProtectedRoute>
+          } />
+
+          <Route path='/reception' element={
+            <ProtectedRoute>
+              <ParentNavigation>
+                <ReceptionistMain />
+              </ParentNavigation>
+            </ProtectedRoute>
+          } />
+          <Route path='/nurse' element={
+            <ProtectedRoute>
+              <ParentNavigation>
+                <NurseMain />
+              </ParentNavigation>
+            </ProtectedRoute>
+          } />
       </Routes>
-    </div>
+      
+    </UserContextProvider>
   )
 }
 

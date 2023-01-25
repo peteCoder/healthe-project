@@ -7,16 +7,7 @@ import DoctorsSidebar from './DoctorsSidebar';
 
 function Consultation() {
   return (
-    <section className="flex gap-6 overflow-x-hidden">
-      <div>
-        <DoctorsSidebar />
-      </div>
-      <div className="text-xl text-black w-full bg-backgroundGray font-semibold">
-        <div>
-          {/* Navbar */}
-          <DefaultNavbar />
-
-          <section>
+    
     <div className="p-4 m-4 bg-white rounded-lg shadow-lg">
       <h1>Consultation Notes</h1>
       <div className="flex flex-col w-full">
@@ -106,12 +97,12 @@ function Consultation() {
                 <div className="form-control">
                   <label className="label cursor-pointer">
                     <span className="label-text mr-4">Admit patient</span>
-                    <input type="checkbox" className="toggle" checked />
+                    <input type="checkbox" className="toggle"  />
                   </label>
                 </div>
               </div>
               <div>
-                <button class="btn btn-active btn-primary">Done</button>
+                <button className="btn btn-active btn-primary">Done</button>
               </div>
             </div>
           </div>
@@ -146,7 +137,7 @@ function Consultation() {
                               </span>
                             </label>
                             <select className="select select-bordered">
-                              <option disabled selected>
+                              <option disabled>
                                 Availible drugs
                               </option>
                               <option>Amodaquine</option>
@@ -215,7 +206,7 @@ function Consultation() {
                     </tbody>
                   </table>
                   <div className="flex w-full justify-end items-end my-4">
-                    <button class="btn btn-active btn-primary">Done</button>
+                    <button className="btn btn-active btn-primary">Done</button>
                   </div>
                 </div>
               </div>
@@ -244,10 +235,7 @@ function Consultation() {
         </div>
       </div>
     </div>
-    </section>
-    </div>
-  </div>
-</section>
+    
   );
 }
 

@@ -3,16 +3,7 @@ import DefaultSearch from "../../components/DefaultSearch";
 import { DefaultNavbar } from "../../components/DefaultNavbar";
 function PatientsHistory() {
   return (
-    <section className="flex gap-6 overflow-x-hidden">
-      <div>
-        <DoctorsSidebar />
-      </div>
-      <div className="text-xl text-black w-full bg-backgroundGray font-semibold">
-        <div>
-          {/* Navbar */}
-          <DefaultNavbar />
-
-          <section>
+    
     <div className="p-4 m-4 bg-white rounded-lg shadow-lg">
       <h1>Patient History</h1>
       <div className="flex flex-col w-full">
@@ -203,10 +194,7 @@ function PatientsHistory() {
         </div>
       </div>
     </div>
-    </section>
-        </div>
-      </div>
-    </section>
+    
   );
 }
 

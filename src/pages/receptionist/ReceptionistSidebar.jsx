@@ -47,6 +47,7 @@ const menus = [
       <div className="mt-4 pl-3 flex flex-col gap-4 relative">
         {menus?.map((menu, i) => (
           <a
+            key={i}
             href="#"
             className={` ${menu?.margin && "mt-5"} ${
               !open && "hover:bg-transparent hover:text-blue-500"
